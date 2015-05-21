@@ -15,9 +15,9 @@ import javax.ws.rs.core.MediaType;
 @Path("/")
 public class HelloResource {
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String getGreeting() {
-        return "Hello world!";
+        return "{message:Hello world!}";
     }
 
 }
