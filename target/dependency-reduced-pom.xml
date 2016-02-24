@@ -11,24 +11,34 @@
   <build>
     <plugins>
       <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>1.7</version>
+        <version>1.6</version>
         <executions>
           <execution>
             <phase>package</phase>
             <goals>
               <goal>shade</goal>
             </goals>
+            <configuration>
+              <transformers>
+                <transformer />
+                <transformer>
+                  <mainClass>com/learning/java/LearningApplication</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
           </execution>
         </executions>
         <configuration>
           <createDependencyReducedPom>true</createDependencyReducedPom>
-          <transformers>
-            <transformer />
-            <transformer>
-              <mainClass>${mainClass}</mainClass>
-            </transformer>
-          </transformers>
           <filters>
             <filter>
               <artifact>*:*</artifact>
@@ -39,70 +49,6 @@
               </excludes>
             </filter>
           </filters>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>${mainClass}</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>2.1.2</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.8.1</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>3.0</version>
-        <configuration>
-          <reportPlugins>
-            <plugin>
-              <artifactId>maven-project-info-reports-plugin</artifactId>
-              <version>2.4</version>
-              <configuration>
-                <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-                <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
-              </configuration>
-            </plugin>
-            <plugin>
-              <artifactId>maven-javadoc-plugin</artifactId>
-              <version>2.8.1</version>
-            </plugin>
-          </reportPlugins>
         </configuration>
       </plugin>
     </plugins>
@@ -138,8 +84,9 @@
     </dependency>
   </dependencies>
   <properties>
+    <quartz.version>2.2.2</quartz.version>
     <dropwizard.version>0.8.0-rc2</dropwizard.version>
-    <mainClass>com.learning.java.LearningApplication</mainClass>
+    <mainClass>com.learning.examples.LearningApplication</mainClass>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>

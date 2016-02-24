@@ -1,0 +1,8 @@
+com/learning/examples/resources/HelloResource.class
+com/learning/examples/resources/HelloResource$1.class
+com/learning/examples/LearningApplication.class
+com/learning/examples/resources/PersonView.class
+com/learning/examples/services/PdfGenerationService.class
+com/learning/examples/views/ReportView.class
+com/learning/examples/LearningConfiguration.class
+com/learning/examples/services/playWithPDF.class

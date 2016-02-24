@@ -1,3 +1,7 @@
-/Users/ahmadhassan/ola/LearningJava/src/main/java/com/learning/java/LearningConfiguration.java
-/Users/ahmadhassan/ola/LearningJava/src/main/java/com/learning/java/resource/HelloResource.java
-/Users/ahmadhassan/ola/LearningJava/src/main/java/com/learning/java/LearningApplication.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/LearningApplication.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/services/PdfGenerationService.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/resources/HelloResource.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/resources/PersonView.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/services/playWithPDF.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/views/ReportView.java
+/Users/ahmad.hassan/ahmadhassan/project/java/StartedWithDropWizard/src/main/java/com/learning/examples/LearningConfiguration.java
