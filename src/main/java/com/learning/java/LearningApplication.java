@@ -1,6 +1,6 @@
 package com.learning.java;
 
-import com.learning.java.resource.HelloResource;
+import com.learning.java.resources.HelloResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -9,14 +9,14 @@ import io.dropwizard.setup.Environment;
 /**
  * Created by ahmadhassan on 21/05/15.
  */
-public class LearningApplication extends Application <LearningConfiguration> {
+public class LearningApplication extends Application<LearningConfiguration> {
 
-    public static void main(String[] args) throws Exception{
-        new LearningApplication().run(new String[]{ "server" });
+    public static void main(String[] args) throws Exception {
+        new LearningApplication().run(new String[]{"server"});
     }
 
     @Override
-    public void initialize(Bootstrap <LearningConfiguration> bootstrap){
+    public void initialize(Bootstrap<LearningConfiguration> bootstrap) {
 
     }
 
