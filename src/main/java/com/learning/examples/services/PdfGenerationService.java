@@ -34,8 +34,11 @@ public class PdfGenerationService {
     document.open();
     // step 4
     try {
+//      new ReportView() {
+//      };
+
       XMLWorkerHelper.getInstance().parseXHtml(writer, document,
-                                               new FileInputStream("pdfDesigns/index.ftl"));
+                                               new FileInputStream("out.html"));
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -43,5 +46,11 @@ public class PdfGenerationService {
     document.close();
 
     return ("PDF Created!");
+  }
+
+  public static void main(String[] args)
+      throws Exception {
+    PdfGenerationService pdf = new PdfGenerationService();
+    pdf.generate();
   }
 }
